@@ -16,16 +16,16 @@ public class LeadCarDTO {
   private Set<String> models = new HashSet<>();
   private Set<String> engines = new HashSet<>();
   private Set<String> bodies = new HashSet<>();
-  private short ccaFrom;
-  private short ccaTo;
+  private short engineCcFrom;
+  private short engineCcTo;
   private double priceFrom;
   private double priceTo;
 
   public LeadCarDTO(LeadCarDO car){
     setId(car.getId());
     setLeadId(car.getLead().getId());
-    setCcaFrom(car.getCcaFrom());
-    setCcaTo(car.getCcaTo());
+    setEngineCcFrom(car.getEngineCcFrom());
+    setEngineCcTo(car.getEngineCcTo());
     setPriceFrom(car.getPriceFrom());
     setPriceTo(car.getPriceTo());
     mapBrands(car.getBrands());

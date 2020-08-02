@@ -73,14 +73,14 @@ public class CarService {
   private void applyConditions(CriteriaBuilder builder, LeadCarDO criteria, Root<CarDO> root, CriteriaQuery<CarDO> selectQuery) {
 
     List<Predicate> conditions = new ArrayList();
-    conditions.add(builder.ge(root.get("cca"), criteria.getCcaFrom()));
+    conditions.add(builder.ge(root.get("engineCc"), criteria.getEngineCcFrom()));
     conditions.add(builder.ge(root.get("price"), criteria.getPriceFrom()));
 
-    if (criteria.getCcaTo() > 0)
-      conditions.add(builder.le(root.get("cca"), criteria.getCcaFrom()));
+    if (criteria.getEngineCcTo() > 0)
+      conditions.add(builder.le(root.get("engineCc"), criteria.getEngineCcTo()));
 
     if (criteria.getPriceTo() > 0)
-      conditions.add(builder.le(root.get("price"), criteria.getPriceFrom()));
+      conditions.add(builder.le(root.get("price"), criteria.getPriceTo()));
 
     selectQuery.where(conditions.toArray(new Predicate[]{}));
 

@@ -37,9 +37,9 @@ public class LeadCarDO extends AbstractAuditEntity {
   private Set<CarBodyDO> bodies = new HashSet<>();
 
   @Column(columnDefinition = "smallint default 0")
-  private short ccaFrom;
+  private short engineCcFrom;
   @Column(columnDefinition = "smallint default 0")
-  private short ccaTo;
+  private short engineCcTo;
   @Column(columnDefinition = "decimal default 0")
   private double priceFrom;
   @Column(columnDefinition = "decimal default 0")
@@ -85,20 +85,20 @@ public class LeadCarDO extends AbstractAuditEntity {
     this.bodies = bodies;
   }
 
-  public short getCcaFrom() {
-    return ccaFrom;
+  public short getEngineCcFrom() {
+    return engineCcFrom;
   }
 
-  public void setCcaFrom(short ccaFrom) {
-    this.ccaFrom = ccaFrom;
+  public void setEngineCcFrom(short engineCcFrom) {
+    this.engineCcFrom = engineCcFrom;
   }
 
-  public short getCcaTo() {
-    return ccaTo;
+  public short getEngineCcTo() {
+    return engineCcTo;
   }
 
-  public void setCcaTo(short ccaTo) {
-    this.ccaTo = ccaTo;
+  public void setEngineCcTo(short engineCcTo) {
+    this.engineCcTo = engineCcTo;
   }
 
   public double getPriceFrom() {

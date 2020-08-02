@@ -127,8 +127,8 @@ public class LeadService {
     leadCarDO.setEngines(carService.findByEngineNameIn(car.getEngines()));
     leadCarDO.setBodies(carService.findByBodyNameIn(car.getBodies()));
     leadCarDO.setModels(carService.findByModelNameIn(car.getModels()));
-    leadCarDO.setCcaFrom(car.getCcaFrom());
-    leadCarDO.setCcaTo(car.getCcaTo());
+    leadCarDO.setEngineCcFrom(car.getEngineCcFrom());
+    leadCarDO.setEngineCcTo(car.getEngineCcTo());
     leadCarDO.setPriceFrom(car.getPriceFrom());
     leadCarDO.setPriceTo(car.getPriceTo());
 

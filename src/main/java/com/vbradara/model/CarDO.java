@@ -21,8 +21,8 @@ public class CarDO extends AbstractEntity {
   @Column(name = "price", nullable = false)
   private double price;
 
-  @Column(name = "cca", nullable = false)
-  private short cca;
+  @Column(name = "engine_cc", nullable = false)
+  private short engineCc;
 
   @Column(name = "power", nullable = false)
   private short power;
@@ -69,12 +69,12 @@ public class CarDO extends AbstractEntity {
     this.price = price;
   }
 
-  public short getCca() {
-    return cca;
+  public short getEngineCc() {
+    return engineCc;
   }
 
-  public void setCca(short cca) {
-    this.cca = cca;
+  public void setEngineCc(short engineCc) {
+    this.engineCc = engineCc;
   }
 
   public short getPower() {

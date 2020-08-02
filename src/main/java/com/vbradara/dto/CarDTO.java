@@ -14,7 +14,7 @@ public class CarDTO {
   private Long modelId;
   private String model;
   private double price;
-  private short engineCca;
+  private short engineCC;
   private short enginePower;
   private Long engineTypeId;
   private String engineTypeName;
@@ -28,7 +28,7 @@ public class CarDTO {
     setModelId(car.getModel().getId());
     setModel(car.getModel().getName());
     setPrice(car.getPrice());
-    setEngineCca(car.getCca());
+    setEngineCC(car.getEngineCc());
     setEnginePower(car.getPower());
     setEngineTypeId(car.getEngine().getId());
     setEngineTypeName(car.getEngine().getType());
