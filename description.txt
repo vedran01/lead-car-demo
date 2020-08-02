@@ -1,0 +1,129 @@
+
+Ukratko zadatak je riješen na način da lead tj. kupac je korisnik u sustavu gdje ima mogućnost unjeti neke karakteristike automobila 
+
+tipa brand, model, tip karoserije , tip motora, kubikažu motora od-do, cijenu od-do, te na osnovu kriterije sustav bi trebao pronaći (ponuditi)
+
+odgovarajuće automobile.
+
+Pokretanje projekta: mvnw spring-boot:run
+
+HOST: http://localhost:8080
+
+REST endpointovi:
+
+Dohvaćanje leadova: 
+
+	GET: /lead?fristName=Pero&lastName=Peric
+
+	Parametri: fristName i lastName nisu obavezni
+
+
+Spremanje novog leada:
+	
+	POST: /lead
+	
+	BODY: {
+			"data":{
+				"username":"pperic",
+				"password":"test12345",
+				"firstName":"Pero",
+				"lastName":"Perić",
+				"contact":{
+					"mail":"pperic@mail.com",
+					"phone":"+385 97 123 4567",
+					"fax":"030 123 456"
+				},
+				"address":{
+					"country":"HR",
+					"place":"Zagreb",
+					"street":"Bana Jelačića 57",
+					"zipCode":"10000"
+				}
+			}
+		}
+		
+Ažuriranje leada:
+	
+	PUT: /lead
+	
+	BODY: {	
+			"id": 1,
+			"data":{
+				"username":"pperic",
+				"password":"test12345",
+				"firstName":"Pero",
+				"lastName":"Perić",
+				"contact":{
+					"mail":"pperic@mail.com",
+					"phone":"+385 97 123 4567",
+					"fax":"030 123 456"
+				},
+				"address":{
+					"country":"HR",
+					"place":"Zagreb",
+					"street":"Bana Jelačića 57",
+					"zipCode":"10000"
+				}
+			}
+		}
+		
+  
+Spremanje karakteristika automobila koje lead želi:
+	
+	POST :/lead
+	
+	BODY: {	
+			"leadId":1,
+			"brands":[
+				"Mercedes-Benz", 
+				"VW", "Audi"
+				],
+			"models":[
+				"A Class", 
+				"C Class", 
+				"A4", 
+				"Passat"
+				],
+			"engines":[
+				"DIESEL",
+				"PETROL"
+			],
+			"bodies":[
+				"limousine", 
+				"coupe"
+			],
+			"engineCcFrom":1200,
+			"engineCcTo":3000,
+			"priceFrom":0,
+			"priceTo":120000
+		}
+		
+  
+Ažuriranje karakteristika automobila koje lead želi:
+	
+	POST :/lead/car
+	
+	BODY: {	
+			"id":1,
+			"brands":[
+				"Mercedes-Benz"
+				],
+			"models":[
+				"A Class", 
+				"C Class", 
+				"S Class"
+				],
+			"engines":[
+				"DIESEL",
+				"PETROL"
+			],
+			"bodies":[
+				"limousine", 
+				"coupe"
+			],
+			"engineCcFrom":1200,
+			"engineCcTo":4000,
+			"priceFrom":0,
+			"priceTo":120000
+		}
+	
