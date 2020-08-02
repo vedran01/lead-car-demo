@@ -126,4 +126,12 @@ Ažuriranje karakteristika automobila koje lead želi:
 			"priceFrom":0,
 			"priceTo":120000
 		}
+
+Dohvaćanje automobila po id od karakteristike
+
+	GET: /cars/{id}
 	
+	
+Dohvaćanje svih spremjenih automobila:
+
+	GET: /cars
